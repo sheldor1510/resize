@@ -1,2 +1,2 @@
 # resize
-A link shortener written in Go using Airtable.
+A link shortener written in Go using Airtable. reCAPTCHA is also implemented.
