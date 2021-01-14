@@ -20,7 +20,9 @@ func main() {
 	router.GET("/", index)
 	router.GET("/:backLink", linkRedirecter)
 	router.POST("/", shortener)
-	log.Fatal(http.ListenAndServe(":3000", router))
+	port := os.Getenv("PORT")
+	log.Print("Listening on :" + port)
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }
 
 func index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
